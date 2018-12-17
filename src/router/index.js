@@ -1,0 +1,5 @@
+import VueRouter from 'vue-router'
+import BoardList from '@/components/BoardList'
+import ShowBoard from '@/components/ShowBoard'
+import AddBoard from '@/components/AddBoard'
+import EditBoard from '@/components/EditBoard'
