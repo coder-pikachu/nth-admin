@@ -8,22 +8,22 @@ export default new VueRouter({
     routes: [{
             path: '/',
             name: 'PuzzleList',
-            component: "PuzzleList"
+            component: PuzzleList
         },
         {
             path: '/show-puzzle/:id',
             name: 'ShowPuzzle',
-            component: "ShowPuzzle"
+            component: ShowPuzzle
         },
         {
             path: '/add-puzzle',
             name: 'AddPuzzle',
-            component: "AddPuzzle"
+            component: AddPuzzle
         },
         {
             path: '/edit-puzzle/:id',
             name: 'EditPuzzle',
-            component: "EditPuzzle"
+            component: EditPuzzle
         }
     ]
 })
