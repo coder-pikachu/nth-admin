@@ -28,7 +28,7 @@ export default {
         },
         answer: { label: "Answer", sortable: true, class: "text-center" }
       },
-      
+      puzzles:[]
     };
   }
 };
