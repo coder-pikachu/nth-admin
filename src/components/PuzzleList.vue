@@ -26,10 +26,43 @@ export default {
           sortable: true,
           class: "text-center"
         },
-        answer: { label: "Answer", sortable: true, class: "text-center" }
+        answer: { label: "Answer", sortable: true, class: "text-center" },
+        actions: { label: "Action", class: "text-center" }
       },
-      puzzles:[]
+      puzzles: [],
+      errors: [],
+      ref: firebase.firestore().collection("puzzles")
     };
+  },
+  created() {
+    this.ref.onSnapshot(querySnapshot => {
+      this.puzzles = [];
+      querySnapshot.forEach(puzzle => {
+        this.puzzles.push({
+          key: puzzle.id,
+          type: puzzle.data().type,
+          difficulty: puzzle.data().difficulty,
+          answer: puzzle.data().answer
+        });
+      });
+    });
+  },
+  methods: {
+    details(puzzle) {
+      router.push({
+        name: "ShowPuzzle",
+        params: {
+          id: puzzle.key
+        }
+      });
+    }
   }
 };
 </script>
+
+<style>
+  .table {
+    width: 96%;
+    margin: 0 auto;
+  }
+</style>
