@@ -35,6 +35,7 @@ export default {
     };
   },
   created() {
+  
     this.ref.onSnapshot(querySnapshot => {
       this.puzzles = [];
       querySnapshot.forEach(puzzle => {

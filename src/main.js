@@ -5,10 +5,12 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Dialog from 'bootstrap-vue-dialog'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
+Vue.use(Dialog)
 
 new Vue({
   router,
