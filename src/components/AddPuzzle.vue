@@ -1,0 +1,37 @@
+<template>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+
+    </body>
+    </html>
+</template>
+
+<script>
+    export default {
+        methods:{
+            created(){
+                var service_url = 'https://kgsearch.googleapis.com/v1/entities:search';
+                var params = {
+                    'query': 'Taylor Swift',
+                    'limit': 10,
+                    'indent': true,
+                    'key' : '<put your api_key here>',
+                };
+                $.getJSON(service_url + '?callback=?', params, function(response) {
+                    $.each(response.itemListElement, function(i, element) {
+                        $('<div>', {text:element['result']['name']}).appendTo(document.body);
+                    });
+                });
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

@@ -6,12 +6,12 @@ const settings = {
 
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyDJQCQnGF27nDsT3XIFkiCEEnT_QO_nddY",
-    authDomain: "horcrux-nth.firebaseapp.com",
-    databaseURL: "https://horcrux-nth.firebaseio.com",
-    projectId: "horcrux-nth",
-    storageBucket: "horcrux-nth.appspot.com",
-    messagingSenderId: "81848626038"
+    apiKey: "AIzaSyDXpoh4dPykua4M_Tu9EQ3GdW7eVjUMWHE",
+    authDomain: "puzzles-project.firebaseapp.com",
+    databaseURL: "https://puzzles-project.firebaseio.com",
+    projectId: "puzzles-project",
+    storageBucket: "puzzles-project.appspot.com",
+    messagingSenderId: "75467181993"
 };
 firebase.initializeApp(config);
 firebase.firestore().settings(settings)
